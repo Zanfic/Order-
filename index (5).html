@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Produk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Buat Tempahan</h1>
+    <form id="orderForm">
+      <label for="name">Nama:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="phone">No. Telefon:</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="product">Produk:</label><br>
+      <select id="product" name="product" required>
+        <option value="tshirt">T-Shirt</option>
+        <option value="sweatpants">Sweatpants</option>
+        <option value="hoodie">Hoodie</option>
+      </select><br><br>
+
+      <label for="size">Saiz:</label><br>
+      <select id="size" name="size" required>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="2XL">2XL</option>
+      </select><br><br>
+
+      <label for="quantity">Kuantiti:</label><br>
+      <input type="number" id="quantity" name="quantity" min="1" value="1" required><br><br>
+
+      <button type="submit">Hantar Order</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      // Link payment contohnya ToyyibPay
+      window.location.href = "https://toyyibpay.com/abcd1234";
+    });
+  </script>
+</body>
+</html>
